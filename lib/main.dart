@@ -84,19 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Nova Conversa'),
-        leading: IconButton(onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('This is a snackbar')));
-        },
+        title: const Text('Nova Conversa'),
+        leading: IconButton(
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('This is a snackbar')));
+          },
           icon: const Icon(Icons.chevron_left),
           tooltip: 'Voltar',
         ),
         actions: [
-          IconButton(onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('This is a snackbar')));
-          }, icon: Icon(Icons.search))
+          IconButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('This is a snackbar')));
+              },
+              icon: const Icon(Icons.search))
         ],
       ),
       body: Center(
